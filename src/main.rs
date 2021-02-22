@@ -16,14 +16,13 @@ fn index() -> &'static str {
 fn send_img(name: String) -> Option<Stream<File>> {
     write_log(&name);
     println!("{}", name);
-    File::open("./img/white.jpg").map(|file| Stream::from(file)).ok()
+    File::open("./img/transparent.png").map(|file| Stream::from(file)).ok()
 }
 
 fn write_log(desc: &str) {
     let mut file = OpenOptions::new()
         .write(true)
         .create(true)
-        .truncate(true)
         .append(true)
         .open("log.log")
         .unwrap();

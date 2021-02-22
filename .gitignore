@@ -1,3 +1,3 @@
 /target
-log.log
-tmp.html
+.DS_Store
+Cargo.lock
